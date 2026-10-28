@@ -1,0 +1,6 @@
+# Samsung's proprietary alert tone / APKs are NOT redistributed here.
+# install.sh extracts cmas_ringtone.ogg from your own device at deploy time.
+*.ogg
+*.apk
+__pycache__/
+*.pyc

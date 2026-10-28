@@ -5,6 +5,10 @@ Exynos Galaxy Note 9 (Android 10 / One UI 2.5), which has **no official or up-to
 NetHunter build**. The only community kernel (Sexynos V2.0, 2020) is gone (dead download),
 so the kernel here was built from a current source tree.
 
+> Also in this repo: **[`wea-simulator/`](wea-simulator/)** — a *local* Wireless
+> Emergency Alert (CMAS) popup + siren simulator for this phone, reverse-engineered
+> from Samsung Messages and driven entirely over adb+root.
+
 ## Result
 
 - Bootloader unlocked (Exynos variant), **TWRP 3.7.0_9-0**, **Magisk 28.1**
