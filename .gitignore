@@ -1,0 +1,9 @@
+# build output / toolchains / artifacts — not vendored here
+out/
+src/
+tc49/
+aosp-gcc/
+*.o
+*.ko
+__pycache__/
+*.pyc

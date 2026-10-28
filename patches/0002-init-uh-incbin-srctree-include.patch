@@ -1,0 +1,13 @@
+diff --git a/init/Makefile b/init/Makefile
+index eac9b05d..ab6e32ec 100755
+--- a/init/Makefile
++++ b/init/Makefile
+@@ -11,6 +11,8 @@ obj-$(CONFIG_BLK_DEV_INITRD)   += initramfs.o
+ obj-$(CONFIG_GENERIC_CALIBRATE_DELAY) += calibrate.o
+ 
+ obj-$(CONFIG_UH)              += _uh.o uh.o ld.o uh_fault_handler.o
++# NetHunter build fix: let .incbin "init/uh.*.elf" resolve in O= (out-of-tree) builds
++AFLAGS__uh.o += -I$(srctree) -Wa,-I$(srctree)
+ 
+ obj-$(CONFIG_RKP_CFP_JOPP)     += rkp_cfp.o
+ 

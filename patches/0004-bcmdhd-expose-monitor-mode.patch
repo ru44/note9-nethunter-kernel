@@ -1,0 +1,15 @@
+diff --git a/drivers/net/wireless/bcmdhd_100_15/wl_cfg80211.c b/drivers/net/wireless/bcmdhd_100_15/wl_cfg80211.c
+index bd5a8e64..89d2cefe 100755
+--- a/drivers/net/wireless/bcmdhd_100_15/wl_cfg80211.c
++++ b/drivers/net/wireless/bcmdhd_100_15/wl_cfg80211.c
+@@ -12890,9 +12890,8 @@ static s32 wl_setup_wiphy(struct wireless_dev *wdev, struct device *sdiofunc_dev
+ 	wdev->wiphy->interface_modes =
+ 		BIT(NL80211_IFTYPE_STATION)
+ 		| BIT(NL80211_IFTYPE_ADHOC)
+-#if !defined(WL_ENABLE_P2P_IF) && !defined(WL_CFG80211_P2P_DEV_IF)
++		/* NetHunter: always expose monitor mode (was gated out when P2P_DEV_IF is set) */
+ 		| BIT(NL80211_IFTYPE_MONITOR)
+-#endif /* !WL_ENABLE_P2P_IF && !WL_CFG80211_P2P_DEV_IF */
+ #if defined(WL_IFACE_COMB_NUM_CHANNELS) || defined(WL_CFG80211_P2P_DEV_IF)
+ 		| BIT(NL80211_IFTYPE_P2P_CLIENT)
+ 		| BIT(NL80211_IFTYPE_P2P_GO)

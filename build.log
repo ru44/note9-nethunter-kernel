@@ -1,0 +1,56 @@
+make: Entering directory '/home/rum/nethunter-note9/kernel/src'
+  CHK     include/config/kernel.release
+  GEN     ./Makefile
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  Using /home/rum/nethunter-note9/kernel/src as source for kernel
+  CHK     scripts/mod/devicetable-offsets.h
+  CHK     include/generated/timeconst.h
+  CHK     include/generated/bounds.h
+  CHK     include/generated/asm-offsets.h
+  CALL    /home/rum/nethunter-note9/kernel/src/scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CHK     kernel/config_data.h
+/home/rum/nethunter-note9/kernel/src/security/samsung/defex_lsm/Makefile:13: [DEFEX] INTEGRITY_ENABLE
+  CC      block/genhd.o
+  CC      drivers/cpufreq/cpufreq.o
+kperfmon_DUMMY=""
+  CC      drivers/kperfmon/ologk.o
+  LD      drivers/kperfmon/built-in.o
+  LD      block/built-in.o
+/home/rum/nethunter-note9/kernel/src/drivers/net/wireless/Makefile:31: android version 1: 100000
+/home/rum/nethunter-note9/kernel/src/drivers/net/wireless/Makefile:32: MAJOR_VERSION version 1: 10
+/home/rum/nethunter-note9/kernel/src/drivers/net/wireless/Makefile:43: platform version 3 : 10
+/home/rum/nethunter-note9/kernel/src/drivers/net/wireless/Makefile:44: MAJOR_VERSION version 3: 10
+  CC      drivers/net/wireless/bcmdhd_100_15/wl_cfg80211.o
+  CC      drivers/staging/samsung/sec_argos.o
+  LD      drivers/cpufreq/built-in.o
+  LD      drivers/staging/samsung/built-in.o
+  LD      drivers/staging/built-in.o
+  LD      drivers/net/wireless/bcmdhd_100_15/dhd.o
+  LD      drivers/net/wireless/bcmdhd_100_15/built-in.o
+  LD      drivers/net/wireless/built-in.o
+  LD      drivers/net/built-in.o
+  LD      drivers/built-in.o
+  GEN     .version
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+  KSYM    .tmp_kallsyms1.o
+  KSYM    .tmp_kallsyms2.o
+  LD      vmlinux
+  SORTEX  vmlinux
+  SYSMAP  System.map
+  FIPS : Generating hmac of crypto and updating vmlinux... 
+HMAC for "crypto" module is: b'1c4c0fa7ab1a37c0d409ee1e7910cca7b9038b17002077c1cd34f0051fd9d566'
+
+FIPS integrity procedure has been finished for crypto
+
+  FIPS : Generating hmac of fmp and updating vmlinux... 
+HMAC for "fmp" module is: b'5e8e4ef30326787261a426eee5953c91c53a5d54c05a215a9f7df7944914588e'
+FIPS integrity procedure has been finished for fmp
+  OBJCOPY arch/arm64/boot/Image
+make: Leaving directory '/home/rum/nethunter-note9/kernel/src'
